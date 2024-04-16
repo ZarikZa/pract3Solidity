@@ -1,0 +1,20 @@
+0x4a56E354531ff14073C444d0641eAa45BaE02833
+
+123
+
+0x259225E861536e2737c5e4eB50D07d9AEc724705
+
+0x8878682096eB25438db616B14176a3Ea24addCB0
+
+geth account new --datadir data - создание нового аккаунта
+geth init --datadir data genesis.json - создание генезис блока
+
+geth --datadir data --networkid 220320241433 --unlock 0x4a56E354531ff14073C444d0641eAa45BaE02833 --allow-insecure-unlock --http --http.corsdomain="*" --http.api web3,eth,debug,personal,net,miner --miner.etherbase 0x4a56E354531ff14073C444d0641eAa45BaE02833 - запуск чатсной сети блокчейна
+geth attach --datadir data ipc:\\.\pipe\geth.ipc - создание отдельной консоли geth для того, чтобы управлять процессами в блокчейне
+    eth.blockNumber - номер блока
+
+СОЗДАТЬ АККАУНТЫ и запомнить пароль
+ЗАПИСАТЬ ИХ В ГЕНЕЗИС БЛОК
+ЗАПУСТИТЬ ПО 12 СТРОЧКЕ
+ПЕРЕЙТИ В ДРУГОЙ ТЕРМИНАЛ И ввести 13 строку и написать miner.start()
+проверять advanced configurations там должно быть paris
